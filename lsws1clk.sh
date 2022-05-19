@@ -5,7 +5,7 @@
 # Magento stable
 # LSCache Latest 
 # PHP 8.1
-# MariaDB 10.4
+# MariaDB 10.7
 # Memcached stable
 # Redis stable
 # PHPMyAdmin Latest
@@ -26,7 +26,7 @@ LSUSER=''
 LSPASS=''
 LSGROUP=''
 THEME='twentytwenty'
-MARIAVER='10.4'
+MARIAVER='10.7'
 DF_PHPVER='81'
 PHPVER='81'
 PHP_M='8'
@@ -39,12 +39,12 @@ WPCFPATH="${DOCROOT}/wp-config.php"
 REPOPATH=''
 WP_CLI='/usr/local/bin/wp'
 MA_COMPOSER='/usr/local/bin/composer'
-LS_VER='6.0.11'
+LS_VER='6.0.12'
 MA_VER='2.4.4'
 OC_VER='3.0.3.8'
 PS_VER='1.7.8.5'
 COMPOSER_VER='1.10.20'
-EMAIL='test@example.com'
+EMAIL='sinitsyn.gennadiy@gmail.com'
 APP_ACCT=''
 APP_PASS=''
 MA_BACK_URL=''
@@ -1024,10 +1024,10 @@ install_wordpress(){
         if [ ${app_skip} = 0 ]; then
              echoG 'Install WordPress...'
             if [ ${SKIP_WP} = 0 ]; then
-                wget -q --no-check-certificate https://wordpress.org/latest.zip
-                unzip -q latest.zip
+                wget -q --no-check-certificate https://ru.wordpress.org/latest-ru_RU.zip
+                unzip -q latest-ru_RU.zip
                 mv wordpress/* ${DOCROOT}
-                rm -rf latest.zip wordpress
+                rm -rf latest-ru_RU.zip wordpress
             fi
         fi
     fi
